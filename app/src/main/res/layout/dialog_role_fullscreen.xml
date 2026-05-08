@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/roleDialogRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- OPAQUE background image for the dialog window -->
+    <ImageView
+        android:id="@+id/roleDialogBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dialog_background" />
+
+    <!-- Content on top of the bg -->
+    <FrameLayout
+        android:id="@+id/roleDialogContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ListView
+            android:id="@+id/roleList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"
+            android:layout_gravity="center_vertical|start" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.mygame.views.MaskClickableImageView
+        android:id="@+id/regionMap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center|top"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- buttons -->
+        <ImageButton
+            android:id="@+id/endTurnButton"
+            android:contentDescription="@string/end_turn"
+            android:scaleType="centerInside"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            app:iconSize="24dp"
+            app:iconPadding="0dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:srcCompat="@drawable/next_turn" />
+
+        <ImageButton
+            android:id="@+id/skipSeveralTurnsButton"
+            android:contentDescription="@string/skip_several_turns"
+            android:scaleType="centerInside"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            app:iconSize="24dp"
+            app:iconPadding="0dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:srcCompat="@drawable/skip_few_turns"/>
+
+        <ImageButton
+            android:id="@+id/returnToMainMenuButton"
+            android:contentDescription="@string/return_to_main_menu"
+            android:scaleType="centerInside"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            app:iconSize="24dp"
+            app:iconPadding="0dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:srcCompat="@drawable/back_to_main_menu" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/overlay"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_gravity="end|center"
+        android:alpha="0.85"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_main.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/arrest">
+    <!-- View for being a judge -->
+    <ImageButton
+        android:id="@+id/returnToMainMenuButton14"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/return_to_main_menu"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/back_to_main_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <ImageButton
+        android:id="@+id/returnToHomeButton14"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/return_to_the_home"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/return_home_town"
+        app:layout_constraintTop_toBottomOf="@id/returnToMainMenuButton14"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Center button -->
+    <Button
+        android:id="@+id/giveVerdict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/give_verdict"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/listen_to_evidence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/listen_to_witnesses"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/giveVerdict"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

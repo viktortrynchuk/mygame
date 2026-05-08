@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Mygame" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <!--<item name="colorPrimary">@android:color/transparent</item>-->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MyGame.M2AlertDialog</item>
+
+
+        <!-- Splash (compat + Android 12+) -->
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/game_icon</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/splash_icon_bg</item>
+
+        <!-- Optional: keep the splash longer while you init -->
+        <item name="postSplashScreenTheme">@style/Theme.Mygame</item>
+    </style>
+
+    <!-- Use a MaterialComponents (M2) dialog overlay, not M3 -->
+    <style name="ThemeOverlay.MyGame.M2AlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/MyDialog.TextButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/MyDialog.TextButton</item>
+    </style>
+
+    <!-- Force a visible text color for dialog text buttons -->
+    <style name="MyDialog.TextButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/colorOnSurface</item> <!-- or @color/white -->
+    </style>
+
+    <!-- Theme used ONLY at launch -->
+    <style name="Theme.Mygame.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Android 12+ splash attributes -->
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <!-- Use the layer-list with tavern -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_layer</item>
+        <!-- No white circle behind the icon -->
+        <item name="windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
+        <!-- After the splash, switch to your normal theme -->
+        <item name="postSplashScreenTheme">@style/Theme.Mygame</item>
+
+        <!-- Pre-Android 12 fallback (compat lib uses this) -->
+        <item name="android:windowBackground">@drawable/splash_layer</item>
+    </style>
+</resources>

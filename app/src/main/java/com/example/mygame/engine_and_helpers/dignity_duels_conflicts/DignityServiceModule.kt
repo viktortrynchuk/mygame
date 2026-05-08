@@ -1,0 +1,15 @@
+package com.example.mygame.engine_and_helpers.dignity_duels_conflicts
+
+import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
+
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class DignityServiceModule {
+    @Binds
+    @Singleton
+    abstract fun bindDignityService(impl: DignityServiceImpl): DignityService
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <item android:drawable="@color/splash_background"/>
+
+    <!-- Center the image -->
+    <item>
+        <bitmap
+            android:src="@drawable/tavern"
+            android:gravity="center"
+            android:filter="true"/>
+    </item>
+</layer-list>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:name=".engine_and_helpers.MyGameApp"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:screenOrientation="landscape"
+        android:label=""
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mygame"
+        tools:targetApi="31" >
+        <!--value of android:label is shown on the top of the screen -->
+
+        <!-- Main activity definition -->
+        <!-- The view for giving the orders, taking information from messengers, going to the global map etc -->
+        <activity android:name=".views.FirstView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for the global map usage -->
+        <activity android:name=".views.SecondView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The battle view -->
+        <activity android:name=".views.ThirdView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for detailed battle map -->
+        <activity android:name=".views.FourthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for the duel -->
+        <activity android:name=".views.FifthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for participation in the ball -->
+        <activity android:name=".views.SixthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for participation in the hunt -->
+        <activity android:name=".views.SeventhView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for participation in the festival -->
+        <activity android:name=".views.EighthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for participation in the audience -->
+        <activity android:name=".views.NinthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for win statistics -->
+        <activity android:name=".views.TenthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for lose statistics -->
+        <activity android:name=".views.EleventhView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for launching the game -->
+        <activity android:name=".views.TwelfthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Mygame.Splash">
+
+            <!-- Intent filter to define FirstView as the launcher activity -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- The view for visiting the tavern -->
+        <activity android:name=".views.ThirteenthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for executing the judgement as the judge-->
+        <activity android:name=".views.FourteenthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view for arrest -->
+        <activity android:name=".views.FifteenthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+        <!-- The view taking a meal -->
+        <activity android:name=".views.SixteenthView"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+
+    </application>
+
+</manifest>

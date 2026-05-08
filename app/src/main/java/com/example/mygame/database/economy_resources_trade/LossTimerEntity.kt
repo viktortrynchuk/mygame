@@ -1,0 +1,12 @@
+package com.example.mygame.database.economy_resources_trade
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "loss_timer")
+data class LossTimerEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val landId: Long,
+    val itemId: String,
+    val nextLossTurn: Int
+)

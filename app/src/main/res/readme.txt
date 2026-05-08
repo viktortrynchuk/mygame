@@ -1,0 +1,1 @@
+ratio of phone 21:9

@@ -1,0 +1,12 @@
+package com.example.mygame.dao.economy_resources_trade
+
+import androidx.room.Dao
+import androidx.room.Query
+import com.example.mygame.dao.BaseDao
+import com.example.mygame.database.economy_resources_trade.ResourceProductionEntity
+
+@Dao
+interface ResourceProductionDao : BaseDao<ResourceProductionEntity> {
+    @Query("SELECT * FROM resource_production WHERE landId = :landId")
+    suspend fun forLand(landId: Long): List<ResourceProductionEntity>
+}
